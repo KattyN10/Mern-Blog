@@ -9,7 +9,7 @@ const searchHelper = (searchKey, query, req) => {
         searchObject[searchKey] = regex
 
         query = query.where(searchObject);
-      
+
         return query
     }
 
@@ -17,30 +17,25 @@ const searchHelper = (searchKey, query, req) => {
 }
 
 
-const paginateHelper = async (model ,query ,req)=> {
+const paginateHelper = async (model, query, req) => {
 
-    const page = parseInt( req.query.page ) || 1 ; 
-    const pageSize = parseInt( req.query.limit ) || 6 ; 
-    const skip  = (page-1 ) * pageSize ; 
-   
-    const regex = new RegExp(req.query.search, "i")    
-
-    const total = await model.countDocuments({"title" : regex})
-  
-    const pages = Math.ceil(total / pageSize )  ;
-
-    query = query.skip(skip).limit(pageSize) ; 
+    const page = parseInt(req.query.page) || 1;
+    const pageSize = parseInt(req.query.limit) || 6;
+    const skip = (page - 1) * pageSize;
+    const regex = new RegExp(req.query.search, "i")
+    const total = await model.countDocuments({ "title": regex })
+    const pages = Math.ceil(total / pageSize);
+    query = query.skip(skip).limit(pageSize);
 
     return {
-        query : query  ,
-        page : page ,
-        pages : pages  
+        query: query,
+        page: page,
+        pages: pages
     }
 
 }
 
-
-module.exports ={
+module.exports = {
     searchHelper,
     paginateHelper
 }

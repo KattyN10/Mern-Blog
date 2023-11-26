@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap&family=Inter&family=Signika+Negative:wght@500&display=swap');
+
 .Inclusive-register-page {
     position: relative;
     width: 100vw;
@@ -44,12 +45,14 @@
     .register-banner-section {
         display: none;
     }
+
     .section-wrapper {
         max-width: 580px;
         width: 100%;
         margin: 0 auto;
         padding: 1.7rem 10vw;
     }
+
     .register-big-wrapper {
         width: 80%;
         padding: 0;

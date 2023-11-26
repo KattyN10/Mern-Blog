@@ -25,7 +25,7 @@
 }
 
 .login-banner-section {
-    background-color: #0507D4;
+    background-color: #005ae6;
     border-radius: 0 9px 9px 0;
     width: 50%;
     display: flex;
@@ -37,12 +37,14 @@
     .login-banner-section {
         display: none;
     }
+
     .section-wrapper {
         max-width: 580px;
         width: 100%;
         margin: 0 auto;
         padding: 1.7rem 10vw;
     }
+
     .login-big-wrapper {
         width: 80%;
         padding: 2.2rem 0;
@@ -60,7 +62,7 @@
 
 .top-suggest_register a {
     font-size: 0.7rem;
-    color: rgb(13, 16, 163);
+    color: #005ae6;
     text-decoration: none;
     font-weight: 600;
     font-family: 'Inter', sans-serif;
@@ -117,11 +119,11 @@
 }
 
 .login-big-wrapper form input:focus-within {
-    border: #0205b1 solid 1px;
+    border: #005ae6 solid 1px;
 }
 
 .login-big-wrapper form input:focus+label {
-    color: #0205b1 !important;
+    color: #005ae6 !important;
 }
 
 .login-screen__forgotpassword {
@@ -130,7 +132,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 0.7rem;
     margin-top: -13px;
-    color: rgb(13, 16, 163);
+    color: #005ae6;
     font-weight: 600;
     cursor: pointer;
     padding: 3px 6px;
@@ -140,7 +142,7 @@
     cursor: pointer;
     border: none;
     outline: 0;
-    background-color: #0205b1;
+    background-color: #005ae6;
     width: 100%;
     text-align: center;
     color: white;

@@ -4,10 +4,10 @@ class CustomError extends Error {
 
         super(message)
 
-        this.statusCode =statusCode
+        this.statusCode = statusCode
     }
 
 }
 
-
 module.exports = CustomError
+

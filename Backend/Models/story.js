@@ -39,8 +39,8 @@ const StorySchema = new mongoose.Schema({
         default: 0
     },
     comments: [{
-            type: mongoose.Schema.ObjectId,
-            ref: "Comment"
+        type: mongoose.Schema.ObjectId,
+        ref: "Comment"
     }],
     commentCount: {
         type: Number,
@@ -50,7 +50,7 @@ const StorySchema = new mongoose.Schema({
 
 }, { timestamps: true })
 
-StorySchema.pre("save",  function (next) {
+StorySchema.pre("save", function (next) {
 
     if (!this.isModified("title")) {
         next();
@@ -65,10 +65,10 @@ StorySchema.pre("save",  function (next) {
 
 StorySchema.pre("remove", async function (next) {
 
-    const story= await Story.findById(this._id)
+    const story = await Story.findById(this._id)
 
     await Comment.deleteMany({
-        story : story 
+        story: story
     })
 
 })

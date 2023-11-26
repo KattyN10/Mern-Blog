@@ -1,5 +1,5 @@
-const isTokenIncluded =(req) => {
-   
+const isTokenIncluded = (req) => {
+
     return (
         req.headers.authorization && req.headers.authorization.startsWith("Bearer")
     )
@@ -15,19 +15,20 @@ const getAccessTokenFromHeader = (req) => {
     return access_token
 }
 
-const sendToken = (user,statusCode ,res)=>{
+const sendToken = (user, statusCode, res) => {
 
     const token = user.generateJwtFromUser()
 
     return res.status(statusCode).json({
-        success: true ,
+        success: true,
         token
     })
 
 }
 
-module.exports ={
+module.exports = {
     sendToken,
     isTokenIncluded,
     getAccessTokenFromHeader
 }
+

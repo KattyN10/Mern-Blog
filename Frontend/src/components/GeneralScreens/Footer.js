@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="footer">
             </div>
             <div className="copyright">
-                <p className="copyright-blog">© 2023 Nguyen Truong Phuc - Software Technology - HCMUTE</p>
+                <p className="copyright-blog">© 2023 Nguyen Truong Phuc - Software Technology - HCMUTE </p>
             </div>
         </div>
     )
